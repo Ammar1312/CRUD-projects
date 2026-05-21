@@ -1850,20 +1850,20 @@ select option {
 .mobile-nav__link {
   display: grid;
   min-width: 0;
-  min-height: 54px;
+  min-height: 46px;
   place-items: center;
-  gap: 3px;
+  gap: 2px;
   border-radius: var(--radius-md);
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 850;
   text-decoration: none;
   transition: transform var(--transition), background var(--transition), color var(--transition);
 }
 
 .mobile-nav__link .sidebar-link__icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .mobile-nav__link:hover,
@@ -2042,7 +2042,7 @@ select option {
 
 @media (max-width: 780px) {
   body {
-    padding-bottom: calc(86px + env(safe-area-inset-bottom));
+    padding-bottom: calc(74px + env(safe-area-inset-bottom));
     background:
       linear-gradient(135deg, rgba(255, 127, 80, 0.18), transparent 22rem),
       linear-gradient(315deg, rgba(64, 145, 255, 0.2), transparent 22rem),
@@ -2152,11 +2152,25 @@ select option {
   .kpi-strip,
   .insight-grid,
   .goal-tiles,
-  .quick-actions,
   .category-budget-controls,
   .form-grid,
   .filters {
     grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-action {
+    min-height: 58px;
+    gap: 6px;
+    padding: 10px 6px;
+  }
+
+  .quick-action span {
+    min-width: 24px;
+    height: 24px;
   }
 
   .kpi-card {
@@ -2208,7 +2222,7 @@ select option {
 
   .toast {
     right: 11px;
-    bottom: calc(94px + env(safe-area-inset-bottom));
+    bottom: calc(82px + env(safe-area-inset-bottom));
     max-width: calc(100% - 22px);
   }
 
@@ -2220,10 +2234,10 @@ select option {
     z-index: 25;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 4px;
+    gap: 3px;
     max-width: 680px;
     margin: 0 auto;
-    padding: 6px;
+    padding: 4px;
     border: 1px solid var(--border-strong);
     border-radius: var(--radius-lg);
     background: var(--panel-strong);
